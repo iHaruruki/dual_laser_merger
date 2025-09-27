@@ -16,6 +16,28 @@ rosdep install --from-paths src --ignore-src -r -y
 colcon build --symlink-install
 source install/setup.bash
 ```
+## Connection test on Lucia
+* Launch LiDAR on Lucia
+```bash
+ros2 launch urg_node2 urg_node2_2lidar.launch.py
+```
+* Broadcast the robot's coordinate transformation (TF)
+```bash
+ros2 launch lucia_description robot.launch.py
+```
+* Launch `dual_laser_merger`
+```bash
+ros2 launch dual_laser_merger urg_node2_merger.launch.py
+```
+* Run rviz2
+```bash
+rviz2
+```
+  * Displays > Global Options > Fixed Frame > `base_footprint`
+  * Click the `Add` button & Select `LaserScan`
+  * LaserScan > Topic > `scan`
+  * LaserScan > Topic > Reliability Policy > `Best Effort`
+
 
 ## Example Demo using recorded bag file
 This demo shows merging of laser scan data from 2 lidars.
