@@ -37,6 +37,7 @@ rviz2
   * Click the `Add` button & Select `LaserScan`
   * LaserScan > Topic > `scan`
   * LaserScan > Topic > Reliability Policy > `Best Effort`
+![rviz2](media/rviz2.gif)
 
 
 ## Example Demo using recorded bag file
