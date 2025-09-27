@@ -16,7 +16,7 @@ rclcpp_components_register_node(dual_laser_merger
   EXECUTABLE dual_laser_merger_node)
 
 install(DIRECTORY include DESTINATION include/dual_laser_merger)
-install(DIRECTORY launch/ DESTINATION share/dual_laser_merger)
+install(DIRECTORY launch DESTINATION share/dual_laser_merger)
 install(DIRECTORY bag DESTINATION share/dual_laser_merger)
 install(DIRECTORY config DESTINATION share/dual_laser_merger)
 
