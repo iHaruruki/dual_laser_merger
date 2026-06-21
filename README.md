@@ -49,17 +49,17 @@ ros2 launch dual_laser_merger demo_laser_merger.launch.py
 ## Requirements
 1. Lidar 1 scan topic, the messages in the topic are required to have `frame_id`.
    ```
-   ~$ ros2 topic info /lidar1/scan
+   ros2 topic info /lidar1/scan
       Type: sensor_msgs/msg/LaserScan
    ```
 2. Lidar 2 scan topic, the messages in the topic are required to have `frame_id`.
    ```
-   ~$ ros2 topic info /lidar2/scan
+   ros2 topic info /lidar2/scan
       Type: sensor_msgs/msg/LaserScan
    ```
 3. TF from Lidar 1 (`laser_1`) and Lidar 2 (`laser_2`) to Target frame (`lsc_mount`)
   ```
-  ~$ ros2 topic echo /tf_static 
+  ros2 topic echo /tf_static 
   transforms:
     - header:
         stamp:
